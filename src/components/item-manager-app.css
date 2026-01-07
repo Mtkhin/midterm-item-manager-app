@@ -1,23 +1,120 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 20px; /* Header alignment */
+  padding-right: 20px; /* added for responsiveness */
 }
 
 /* Table basic style */
 .item-table {
   border-collapse: collapse;
   text-align: left;
+  width: 100%;              /* added */
+  max-width: 980px;         /* added */
 }
 
+/* Table borders */
 .item-table th,
 .item-table td {
   border-bottom: 1px solid black;
+  padding: 12px 14px;       /* 🔥 spacing fix */
+  vertical-align: middle;   /* added */
 }
 
 /* Header */
 #h1 {
   font-size: 1.25rem;
   font-weight: 600;
+  margin-top: 16px;         /* added */
+  margin-bottom: 12px;      /* added */
 }
 
+/* Column widths */
+#col-item-id {
+  width: 60px;
+}
 
+#col-item-name {
+  width: 30%;
+}
+
+#col-item-category {
+  width: 18%;
+  text-align: center;
+}
+
+#col-item-price {
+  width: 18%;
+}
+
+#col-item-action {
+  width: 16%;
+  text-align: center;
+}
+
+/* Inputs & select */
+.item-table input,
+.item-table select {
+  width: 100%;
+  padding: 8px 10px;        /* added */
+  font-size: 14px;          /* added */
+  box-sizing: border-box;
+  border-radius: 4px;       /* added */
+  border: 1px solid #aaa;   /* added */
+}
+
+/* Button */
+.item-table button {
+  width: 100%;
+  padding: 8px 12px;        /* added */
+  font-size: 14px;
+  border-radius: 4px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+/* Icons */
+.item-table img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Error message */
+#error-message {
+  margin-top: 14px;
+  color: red;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets & small screens */
+@media (max-width: 768px) {
+  #h1 {
+    font-size: 1.1rem;
+  }
+
+  .item-table th,
+  .item-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .item-table input,
+  .item-table select,
+  .item-table button {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
+
+/* Very small screens (phones) */
+@media (max-width: 480px) {
+  .item-table {
+    min-width: 520px;       /* allow horizontal scroll */
+  }
+
+  #data-area {
+    overflow-x: auto;
+  }
+}
