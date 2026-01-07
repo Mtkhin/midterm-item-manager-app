@@ -118,3 +118,19 @@
     overflow-x: auto;
   }
 }
+/* Add Item button – blue like sample */
+.item-table button {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  background-color: #2f5fd7; /* blue */
+  color: white;
+  cursor: pointer;
+}
+
+/* hover effect */
+.item-table button:hover {
+  background-color: #244fc0;
+}
